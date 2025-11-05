@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Upload CSV</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <main id="main" class="container">
+    <h1>Upload CSV</h1>
+    {% if message %}
+      <div role="status" class="notice">{{ message }}</div>
+    {% endif %}
+    <form action="{{ url_for('upload_csv') }}" method="post" enctype="multipart/form-data">
+      <label for="file">CSV file</label>
+      <input id="file" name="file" type="file" accept=".csv" required aria-required="true">
+      <button class="btn" type="submit">Upload</button>
+    </form>
+    <p>CSV format: <code>name,price,description,image_url</code></p>
+    <p><a href="{{ url_for('index') }}">Back to home</a></p>
+  </main>
+</body>
+</html>

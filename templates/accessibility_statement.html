@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Accessibility Statement</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ 
+</head>
+<body>
+  <main class="container">
+    <h1>Accessibility Statement</h1>
+    <p>This prototype follows basic WCAG principles: semantic HTML, keyboard access, form labels, and focus styles. It's for demonstration and educational use.</p>
+    <ul>
+      <li>Keyboard navigable: yes</li>
+      <li>Forms labeled: yes</li>
+      <li>Images have alt text: where provided</li>
+    </ul>
+    <p><a href="{{ url_for('index') }}">Back</a></p>
+  </main>
+</body>
+</html>
