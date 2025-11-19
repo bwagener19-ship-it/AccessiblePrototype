@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Budget Results</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<main class="container">
+  <h1>Budget Results (R{{ '{:.2f}'.format(budget) }})</h1>
+  {% if products %}
+    <ul class="product-list">
+      {% for p in products %}
+        <li><strong>{{ p.name }}</strong> — R{{ '{:.2f}'.format(p.price) }}</li>
+      {% endfor %}
+    </ul>
+    <p>Total: R{{ '{:.2f}'.format(total) }}</p>
+  {% else %}
+    <p>No items fit the budget.</p>
+  {% endif %}
+  <p><a href="{{ url_for('index') }}">Back</a></p>
+</main>
+</body></html>
+

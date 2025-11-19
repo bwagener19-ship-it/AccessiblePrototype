@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Accessible Prototype - Home</title>
- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+  <title>Bulk Upload Prototype</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header role="banner" class="site-header">
+  <header class="site-header">
     <h1>Bulk Upload Prototype</h1>
     <p class="subtitle">Accessible & responsive prototype</p>
   </header>
 
-  <main id="main" role="main" class="container">
-    <nav aria-label="Main actions" class="card">
+  <main class="container">
+    <nav class="card" aria-label="Main actions">
       <ul>
         <li><a class="btn" href="{{ url_for('add_product') }}">Add Single Product</a></li>
         <li><a class="btn" href="{{ url_for('upload_csv') }}">Upload CSV</a></li>
@@ -23,21 +21,19 @@
         <li><a class="btn" href="{{ url_for('accessibility_statement') }}">Accessibility Statement</a></li>
       </ul>
     </nav>
-    <section class="card" aria-labelledby="howto">
-      <h2 id="howto">How to use</h2>
+
+    <section class="card">
+      <h2>How to use</h2>
       <ol>
-        <li>Use Add to add products one-by-one.</li>
-        <li>Use Upload to upload multiple via CSV (name,price,description,image_url).</li>
-        <li>Use View to see and sort products.</li>
+        <li>To add one product at a time, click "Add Single Product".</li>
+        <li>To upload many products, prepare a CSV with columns: <code>name,price,description,image_url</code>.</li>
+        <li>To test algorithms and data structures, visit the demo endpoints under <code>/ds/*</code>.</li>
       </ol>
     </section>
   </main>
 
-  <footer role="contentinfo" class="site-footer">
+  <footer class="site-footer">
     <small>Intern: Accessible Prototype — Demo</small>
   </footer>
 </body>
 </html>
-
-
-
