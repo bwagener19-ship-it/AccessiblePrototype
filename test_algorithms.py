@@ -13,6 +13,10 @@ class TestAlgorithms(unittest.TestCase):
         self.assertEqual(dist, 4) 
         self.assertIn('A', path); self.assertIn('D', path)
 
+class SmokeTest(unittest.TestCase):
+    def test_smoke(self):
+        self.assertTrue(True)
+        
     def test_max_overlap_and_assembly(self):
         a = "ABCDEF"
         b = "DEFXYZ"
